@@ -51,22 +51,39 @@ function Dev()  {
     return (
         <>
         <div className='navHolder'>
-            <div className='nav'></div>
-        </div>
-        <div className='header'>
-            <h1 className='aboutMe'>ABOUT ME</h1>
-            <div className='myname'>Maryam Dar</div>
-            <div className='dev'>computer engineering student</div>
-        </div>
-        <div className='center'>
-            <div className='projTitle'>PROJRCTS</div>
-            <div className='projects'>
-                {projects.map((project) =>  <Square title={project.title} desc={project.desc} date={project.date} hashtags={project.hashtags}/> )}
+            <div className='nav'>
+                <div className='componentsHolder'>
+                    <a className='component' href='#home'>Home</a>
+                    <a className='component' href='#aboutMe'>About Me</a>
+                    <a className='component' href='#projects'>Projects</a>
+                    {/* <a href="#section1" class="btn" target="_blank"><h1 style="font-family: vazir;" style="font-size: x-large;"> معرفی</h1></a> */}
+                    {/* <div className='component'>About Me</div>
+                    <div className='component'>Projects</div> */}
+                </div>
             </div>
         </div>
-        <div>
-            <h1 style={{marginTop: "1100px", marginBottom: "500px"}}>welcome haha</h1>
+        <div className='home' id='home'>
+            <div className='title'>Maryam Dar</div>
         </div>
+
+        {/* <div className='holder'> */}
+            <div className='header' id='aboutMe'>
+                <h1 className='aboutMe'>ABOUT ME</h1>
+                <div className='myname'>Maryam Dar</div>
+                <div className='dev'>computer engineering student</div>
+            </div>
+            {/* <div className='home'> */}
+                <div className='center' id='projects'>
+                    <div className='projTitle'>PROJRCTS</div>
+                    <div className='projects'>
+                        {projects.map((project) =>  <Square title={project.title} desc={project.desc} date={project.date} hashtags={project.hashtags}/> )}
+                    </div>
+                </div>
+            {/* </div> */}
+            <div>
+                <h1 style={{marginTop: "1100px", marginBottom: "500px"}}>welcome haha</h1>
+            </div>
+        {/* </div> */}
         </>
     );
 };
