@@ -210,6 +210,27 @@
   background-color: transparent;
   width: 100vh;
 }
+@media screen and (max-width: 1550px) {
+
+  .center{
+    transform: scale(0.6);
+  }
+  .header{
+    transform: scale(0.7);
+    background-color: transparent;
+    /* z-index: -1; */
+  }
+  .projTitle{
+    font-size: 40px;
+  }
+  .nav{
+    transform: scale(0.8);
+  }
+  .home{
+    transform: scale(0.8);
+  }
+  
+}
 @media screen and (max-width: 950px) {
 
   .center{
@@ -234,11 +255,12 @@
 @media screen and (max-width: 500px) {
   .center{
     transform: scale(0.4);
+    /* z-index: -1; */
   }
   .header{
     transform: scale(0.6);
-    background-color: transparent;
-    z-index: -1;
+    /* background-color: transparent; */
+    /* z-index: -1; */
   }
   .projTitle{
     font-size: 30px;
