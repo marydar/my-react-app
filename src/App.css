@@ -9,12 +9,13 @@
 }
 ::-webkit-scrollbar {
   width: 10px; /* Adjust the width as needed */
-  background-color: #484848;
+  background-color: #202020;
  /* Adjust the border radius as needed */
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #202020;
+  
+  background-color: #484848;
   border-radius: 10px; /* Adjust the border radius as needed */
 }
 .App {
@@ -56,8 +57,8 @@
   }
 }
 .square{
-  width: 430px;
-  height: 350px;
+  width: 520px;
+  height: 380px;
   background-color: #282c34;
   border-radius: 40px;
   border:1px solid #61dafb ;
@@ -87,7 +88,7 @@
   /* background: blue; */
   display: grid;
   gap: 300px 300px;
-  grid-template-columns: repeat(2, 430px);
+  grid-template-columns: repeat(2, 520px);
   align-items: center;
   justify-content: center;
   margin-top: 30px;
@@ -138,8 +139,8 @@
 /* } */ 
 .aboutMe{
   color: #ffffff;
-  position: sticky;
-  top :140px;
+  /* position: sticky;
+  top :140px; */
   background-color: transparent;
   border-bottom: 1px solid #61dafb;
   font-size: 56px;
@@ -279,7 +280,7 @@
     transform: scale(0.8);
   }
   .projects{
-    grid-template-columns: repeat(1, 430px);
+    grid-template-columns: repeat(1, 520px);
   }
   
 }
@@ -295,6 +296,7 @@
   }
   .projTitle{
     font-size: 40px;
+    position: absolute;
   }
   .nav{
     transform: scale(0.7);
@@ -304,7 +306,7 @@
     transform: scale(0.7);
   }
   .projects{
-    grid-template-columns: repeat(1, 430px);
+    grid-template-columns: repeat(1, 520px);
   }
   
 }
@@ -329,7 +331,7 @@
   }
 
   .image{
-    width: 400px;
+    width: 480px;
     height: 120px;
     background-color: #131519;
     border-radius: 30px;
