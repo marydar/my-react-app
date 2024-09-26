@@ -259,7 +259,7 @@
 @media screen and (max-width: 950px) {
 
   .center{
-    transform: scale(0.6);
+    transform: scale(0.9);
   }
   .header{
     transform: scale(0.7);
@@ -267,7 +267,9 @@
     /* z-index: -1; */
   }
   .projTitle{
-    font-size: 40px;
+    top: 10px;
+    position: sticky;
+    font-size: 60px;
   }
   .nav{
     transform: scale(0.8);
@@ -276,11 +278,14 @@
   .home{
     transform: scale(0.8);
   }
+  .projects{
+    grid-template-columns: repeat(1, 430px);
+  }
   
 }
 @media screen and (max-width: 500px) {
   .center{
-    transform: scale(0.4);
+    transform: scale(0.7);
     /* z-index: -1; */
   }
   .header{
@@ -289,7 +294,7 @@
     /* z-index: -1; */
   }
   .projTitle{
-    font-size: 30px;
+    font-size: 40px;
   }
   .nav{
     transform: scale(0.7);
@@ -297,6 +302,9 @@
   }
   .home{
     transform: scale(0.7);
+  }
+  .projects{
+    grid-template-columns: repeat(1, 430px);
   }
   
 }
