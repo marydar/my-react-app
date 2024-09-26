@@ -137,12 +137,12 @@
   position: fixed;
 } */
 .navHolder{
-  top: 20px;
+  /* top: 20px;
   left: 0;
-  right: 0;
+  right: 0; */
   background: transparent;
   display: flex;
-  position: fixed;
+  /* position: fixed; */
   align-items: center;
   justify-content: center;
 }
@@ -151,7 +151,9 @@
   height: 70px;
   background: #131519;
   opacity: 0.8;
-  z-index: 1000;
+  position: fixed;
+  top: 20px;
+  z-index: 9999;
   border-radius: 40px;
   border:1px solid #61dafb;
   display: flex;
@@ -210,6 +212,12 @@
   background-color: transparent;
   width: 100vh;
 }
+
+@media screen and (min-width: 1550px) {
+  .nav{
+    z-index: 9999;
+  }
+}
 @media screen and (max-width: 1550px) {
 
   .center{
@@ -225,6 +233,7 @@
   }
   .nav{
     transform: scale(0.8);
+    z-index: 9999;
   }
   .home{
     transform: scale(0.8);
@@ -246,6 +255,7 @@
   }
   .nav{
     transform: scale(0.8);
+    z-index: 9999;
   }
   .home{
     transform: scale(0.8);
@@ -267,9 +277,29 @@
   }
   .nav{
     transform: scale(0.7);
+    z-index: 9999;
   }
   .home{
     transform: scale(0.7);
   }
   
 }
+
+#stars {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  animation: animStar 50s linear infinite;
+}
+/* #stars :hover{
+  width: 2px;
+  height: 2px;
+  cursor: pointer;
+} */
+
+@keyframes animStar{
+  from	{
+    transform: translateY(0px)}
+  to		{
+    transform: translateY(-2000px)}
+  }

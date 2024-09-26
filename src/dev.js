@@ -1,6 +1,7 @@
 "use client";
 
-import { useRef } from 'react';
+// import { useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 import { motion, useScroll, useTransform} from "framer-motion";
 import Project from './project';
@@ -42,14 +43,72 @@ function Square(props){
     );
 };
 
+
+function generateBoxShadows(n) {
+    let shadows = [];
+    for (let i = 0; i < n; i++) {
+      const x = Math.floor(Math.random() * 2000);
+      const y = Math.floor(Math.random() * 8000);
+      shadows.push(`${x}px ${y}px #FFF`);
+    }
+    return shadows.join(', ');
+  }
+
+
 function Dev()  {
     addProject("music player", "jan 2024", "this is music player clone", "#java #javafx","links", "imgurl");
     addProject("music player", "jan 2024", "this is music player clone", "#java #javafx","links", "imgurl");
     addProject("music player", "jan 2024", "this is music player clone", "#java #javafx","links", "imgurl");
     addProject("music player", "jan 2024", "this is music player clone", "#java #javafx","links", "imgurl");
-    // const project = makeProject();
+    const numberOfStars = 700;
+    // const boxShadows = generateBoxShadows(numberOfStars);
+
+    const starsRef = useRef(null);
+
+    const applyStyles = () => {
+        const boxShadows = generateBoxShadows(numberOfStars); // Replace with your box shadow generation logic
+        starsRef.current.style.boxShadow = boxShadows;
+    };
+
+    useEffect(() => {
+        window.addEventListener('mousemove', applyStyles);
+        return () => {
+          window.removeEventListener('mousemove', applyStyles);
+        };
+      }, []);
+
+    const [stars, setStars] = useState([]);
+      
+        useEffect(() => {
+          // Generate an array of stars with random positions and sizes
+          const newStars = Array.from({ length: 100 }, () => ({
+            position: { x: Math.random() * window.innerWidth, y: 0 },
+            size: Math.random() * 3,
+            boxShadow: generateBoxShadows(1) // Implement your box shadow generation logic
+          }));
+          setStars(newStars);
+        }, []);
+    
     return (
         <>
+        {/* {applyStyles()} */}
+        <div id="stars" ref={starsRef} ></div>
+
+        {/* <div className="stars-container">
+            {stars.map((star, index) => (
+              <div
+                key={index}
+                id="stars"
+                style={{
+                  left: star.position.x,
+                  top: star.position.y,
+                  width: `${star.size}px`,
+                  height: `${star.size}px`,
+                  boxShadow: star.boxShadow
+                }}
+              />
+            ))}
+          </div> */}
         <div className='navHolder'>
             <div className='nav'>
                 <div className='componentsHolder'>
