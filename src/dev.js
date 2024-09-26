@@ -22,8 +22,8 @@ function Square(props){
         target: ref,
         offset: ["0 1", "1.33 1"],
     });
-    const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
-    const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+    const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
+    const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.4, 1]);
     // const project = makeProject();
     return(
         <motion.div className='square'
@@ -33,12 +33,30 @@ function Square(props){
                 opacity: opacityProgress,
             }}
         >
+
+        <div className='image'>
+            {/* <img></img> */}
+        </div>
+        <div className='desc'>
+            <div className='desc-top'>
+                <div className='projectTitle p'>{props.title}</div>
+                <div className='links'>
+                    <div className='link p'>a</div>
+                    <div className='link p'>b</div>
+                    <div className='link p'>c</div>
+                </div>
+            </div>
+
+            <div className='desc-center'>
+                <p className='description'>{props.date}</p>
+                <div className='description'>{props.desc}</div>
+            </div>
+
+            <div className='desc-bottom'>
+                <p className='description'>{props.hashtags}</p>
+            </div>
+        </div>
             
-                <p className='p'>{props.title}</p>
-                <p className='p'>{props.date}</p>
-                <p className='p'>{props.desc}</p>
-                <p className='p'>{props.hashtags}</p>
-                {/* <a class="ee" href="https://github.com/marydar "  target="_blank"><i class="fa fa-github" style="font-size:20px;color:rgb(255, 255, 255)"></i></a> */}
         </motion.div>
     );
 };
@@ -56,10 +74,11 @@ function generateBoxShadows(n) {
 
 
 function Dev()  {
-    addProject("music player", "jan 2024", "this is music player clone", "#java #javafx","links", "imgurl");
-    addProject("music player", "jan 2024", "this is music player clone", "#java #javafx","links", "imgurl");
-    addProject("music player", "jan 2024", "this is music player clone", "#java #javafx","links", "imgurl");
-    addProject("music player", "jan 2024", "this is music player clone", "#java #javafx","links", "imgurl");
+    addProject("music player", "jan 2024", "this is music player clone this is music player clone this is music player clone this is music player clone this is music player clone", "#java #javafx","links", "imgurl");
+    addProject("music player", "jan 2024", "this is music player clone this is music player clone this is music player clone this is music player clone this is music player clone", "#java #javafx","links", "imgurl");
+    addProject("music player", "jan 2024", "this is music player clone this is music player clone this is music player clone this is music player clone this is music player clone", "#java #javafx","links", "imgurl");
+    addProject("music player", "jan 2024", "this is music player clone this is music player clone this is music player clone this is music player clone this is music player clone", "#java #javafx","links", "imgurl");
+    
     const numberOfStars = 700;
     // const boxShadows = generateBoxShadows(numberOfStars);
 
