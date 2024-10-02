@@ -166,9 +166,6 @@ function Dev()  {
                     </div>
                 </div>
             {/* </div> */}
-            <div>
-                <h1 style={{marginTop: "1100px", marginBottom: "500px"}}>welcome haha</h1>
-            </div>
         {/* </div> */}
         </>
     );
