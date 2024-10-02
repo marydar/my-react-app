@@ -20,7 +20,7 @@
   border-radius: 10px; /* Adjust the border radius as needed */
 }
 .App {
-  /* text-align: center; */
+  text-align: center;
 }
 
 .App-logo {
@@ -252,6 +252,163 @@
     grid-template-columns: repeat(1, 450px);
   }
 }
+@media screen and (min-width: 700px) {
+  .image{
+    width: 420px;
+    margin:15px 5px 0px 5px;
+  }
+  .desc{
+    width: 380px;
+  }
+  .description{
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .projects{
+    grid-template-columns: repeat(1, 350px);
+  }
+  .component{
+    font-size: 10px;
+    padding-left: 15px;
+    padding-right: 15px;;
+  }
+  .nav{
+    padding: 0px 40px 0px 40px;
+  }
+  .title{
+    font-size: 70px;
+  }
+  .myname{
+    font-size: 70px;
+  }
+  .aboutMe{
+    font-size: 26px;
+  }
+  .dev{
+    font-size: 18px;
+  }
+  .social{
+    width: 30px;
+    height: 30px;
+  }
+  .projTitle{
+    font-size: 26px;
+  }
+  .square{
+    width: 350px;
+    height: 250px;
+  }
+  .image{
+    width: 320px;
+    margin:15px 5px 0px 5px;
+
+  }
+  .desc{
+    width: 300px;
+  }
+  .description{
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .projects{
+    grid-template-columns: repeat(1, 300px);
+  }
+  .component{
+    font-size: 10px;
+    padding-left: 10px;
+    padding-right: 10px;;
+  }
+  .nav{
+    padding: 0px 30px 0px 30px;
+  }
+  .title{
+    font-size: 70px;
+  }
+  .myname{
+    font-size: 70px;
+  }
+  .aboutMe{
+    font-size: 26px;
+  }
+  .dev{
+    font-size: 18px;
+  }
+  .social{
+    width: 30px;
+    height: 30px;
+  }
+  .projTitle{
+    font-size: 26px;
+  }
+  .square{
+    width: 300px;
+    height: 200px;
+  }
+  .image{
+    width: 280px;
+    margin:10px 10px 0px 10px;
+  }
+  .desc{
+    width: 270px;
+  }
+  .description{
+    font-size: 10px;
+  }
+  .projectTitle{
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .projects{
+    grid-template-columns: repeat(1, 250px);
+  }
+  .component{
+    font-size: 10px;
+    padding-left: 10px;
+    padding-right: 10px;;
+  }
+  .nav{
+    padding: 0px 30px 0px 30px;
+  }
+  .title{
+    font-size: 70px;
+  }
+  .myname{
+    font-size: 70px;
+  }
+  .aboutMe{
+    font-size: 26px;
+  }
+  .dev{
+    font-size: 18px;
+  }
+  .social{
+    width: 30px;
+    height: 30px;
+  }
+  .projTitle{
+    font-size: 26px;
+  }
+  .square{
+    width: 250px;
+    height: 180px;
+  }
+  .image{
+    width: 230px;
+    margin:10px 10px 0px 10px;
+  }
+  .desc{
+    width: 220px;
+  }
+  .description{
+    font-size: 8px;
+  }
+  .projectTitle{
+    font-size: 14px;
+  }
+}
 /* 
 @media screen and (min-width: 1550px) {
   .nav{
@@ -356,17 +513,9 @@
     transform: translateY(-2000px)}
   }
 
-  .image{
-    width: 420px;
-    height: 150px;
-    background-color: #4A4A4A;
-    border-radius: 20px;
-    margin:15px 5px 0px 5px;
-
-  }
 
 .desc{
-  width: 380px;
+  /* width: 380px; */
   height: 200px;
   background-color: transparent;
   /* background-color: #61dafb; */
@@ -374,6 +523,14 @@
   flex-direction: column;
   justify-content: center;
   /* align-items: center; */
+}
+.image{
+  /* width: 420px; */
+  height: 150px;
+  background-color: #4A4A4A;
+  border-radius: 20px;
+  /* margin:15px 5px 0px 5px; */
+
 }
 .desc-top{
   background-color: transparent;
@@ -409,7 +566,8 @@
 .description{
   align-content: start;
   background-color: transparent;
-  font-size: 16px;
+  /* font-size: 16px; */
   font-weight: 500;
+  text-align: left;
 
 }
