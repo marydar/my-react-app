@@ -23,14 +23,16 @@ function Square(props){
         offset: ["0 1", "1.33 1"],
     });
     const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
-    const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.4, 1]);
+    const opacityProgress = useTransform(scrollYProgress, [0.5, 1], [0, 1]);
+    const rotateProgress = useTransform(scrollYProgress, [0.5, 1], [-90, 0]);
     // const project = makeProject();
     return(
         <motion.div className='square'
             ref = {ref}
             style={{
                 scale: scaleProgress,
-                opacity: opacityProgress,
+            //     // opacity: opacityProgress,
+            //     rotateX: rotateProgress,
             }}
         >
 
@@ -48,7 +50,7 @@ function Square(props){
             </div>
 
             <div className='desc-center'>
-                <p className='description'>{props.date}</p>
+                <div className='description'>{props.date}</div>
                 <div className='description'>{props.desc}</div>
             </div>
 
@@ -74,10 +76,10 @@ function generateBoxShadows(n) {
 
 
 function Dev()  {
-    addProject("music player", "jan 2024", "this is music player clone this is music player clone this is music player clone this is music player clone this is music player clone", "#java #javafx","links", "imgurl");
-    addProject("music player", "jan 2024", "this is music player clone this is music player clone this is music player clone this is music player clone this is music player clone", "#java #javafx","links", "imgurl");
-    addProject("music player", "jan 2024", "this is music player clone this is music player clone this is music player clone this is music player clone this is music player clone", "#java #javafx","links", "imgurl");
-    addProject("music player", "jan 2024", "this is music player clone this is music player clone this is music player clone this is music player clone this is music player clone", "#java #javafx","links", "imgurl");
+    addProject("Music Player", "jan 2024", "this is music player clone this is music player clone this is music player clone this is music player clone this is music player clone", "#java #javafx","links", "imgurl");
+    addProject("Music Player", "jan 2024", "this is music player clone this is music player clone this is music player clone this is music player clone this is music player clone", "#java #javafx","links", "imgurl");
+    addProject("Music Player", "jan 2024", "this is music player clone this is music player clone this is music player clone this is music player clone this is music player clone", "#java #javafx","links", "imgurl");
+    addProject("Music Player", "jan 2024", "this is music player clone this is music player clone this is music player clone this is music player clone this is music player clone", "#java #javafx","links", "imgurl");
     
     const numberOfStars = 700;
     // const boxShadows = generateBoxShadows(numberOfStars);
@@ -111,7 +113,7 @@ function Dev()  {
     return (
         <>
         {/* {applyStyles()} */}
-        <div id="stars" ref={starsRef} ></div>
+        <div id="stars" ref={starsRef} ></div> 
 
         {/* <div className="stars-container">
             {stars.map((star, index) => (
@@ -131,9 +133,9 @@ function Dev()  {
         <div className='navHolder'>
             <div className='nav'>
                 <div className='componentsHolder'>
-                    <a className='component' href='#home'>Home</a>
-                    <a className='component' href='#aboutMe'>About Me</a>
-                    <a className='component' href='#projects'>Projects</a>
+                    <a className='component' href='#home'>HOME</a>
+                    <a className='component' href='#aboutMe'>ABOUT ME</a>
+                    <a className='component' href='#projects'>PROJECTS</a>
                     {/* <a href="#section1" class="btn" target="_blank"><h1 style="font-family: vazir;" style="font-size: x-large;"> معرفی</h1></a> */}
                     {/* <div className='component'>About Me</div>
                     <div className='component'>Projects</div> */}
@@ -148,7 +150,13 @@ function Dev()  {
             <div className='header' id='aboutMe'>
                 <h1 className='aboutMe'>ABOUT ME</h1>
                 <div className='myname'>Maryam Dar</div>
-                <div className='dev'>computer engineering student</div>
+                <div className='dev'>Computer Engineering Student</div>
+                <div className='socialHolder'>
+                    <div className='social'></div>
+                    <div className='social'></div>
+                    <div className='social'></div>
+                </div>
+               
             </div>
             {/* <div className='home'> */}
                 <div className='center' id='projects'>
