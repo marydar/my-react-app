@@ -160,7 +160,7 @@ function Dev()  {
             </div>
             {/* <div className='home'> */}
                 <div className='center' id='projects'>
-                    <div className='projTitle'>PROJRCTS</div>
+                    <div className='projTitle'>PROJECTS</div>
                     <div className='projects'>
                         {projects.map((project) =>  <Square title={project.title} desc={project.desc} date={project.date} hashtags={project.hashtags}/> )}
                     </div>

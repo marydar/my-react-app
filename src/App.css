@@ -302,7 +302,7 @@
     grid-template-columns: repeat(1, 300px);
   }
   .component{
-    font-size: 10px;
+    font-size: 12px;
     padding-left: 10px;
     padding-right: 10px;;
   }
@@ -310,23 +310,25 @@
     padding: 0px 30px 0px 30px;
   }
   .title{
-    font-size: 70px;
+    font-size: 90px;
   }
   .myname{
-    font-size: 70px;
+    font-size: 50px;
+    margin-top: 80px;
   }
   .aboutMe{
     font-size: 26px;
   }
   .dev{
-    font-size: 18px;
+    font-size: 16px;
   }
   .social{
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
   }
   .projTitle{
     font-size: 26px;
+    margin-bottom: 20px;
   }
   .square{
     width: 300px;
