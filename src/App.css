@@ -61,7 +61,7 @@
   width: 450px;
   height: 350px;
   background-color: #0c131b70;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(3px);
   border-radius: 20px;
   border:1px solid #4D7E84 ;
   /* margin-bottom: 60px; */
