@@ -6,6 +6,17 @@ import './App.css';
 import { motion, useScroll, useTransform} from "framer-motion";
 import Project from './project';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { faGlobe } from '@fortawesome/free-solid-svg-icons'
+
+import { faTelegram } from '@fortawesome/free-brands-svg-icons'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faYoutube } from '@fortawesome/free-brands-svg-icons'
+
+const element = <FontAwesomeIcon icon={faCoffee} />
+
 function makeProject(){
     const project = new Project("music player", "jan 2024", "this is music player clone", "#java #javafx","links", "imgurl");
     return project;
@@ -43,9 +54,14 @@ function Square(props){
             <div className='desc-top'>
                 <div className='projectTitle p'>{props.title}</div>
                 <div className='links'>
-                    <div className='link p'>a</div>
+                    {/* <div className='link p'>a</div>
                     <div className='link p'>b</div>
-                    <div className='link p'>c</div>
+                    <div className='link p'>c</div> */}
+
+                    <a href="https://www.w3schools.com" target='_blank' className='link'><FontAwesomeIcon icon={faGithub} className='link' inverse/></a>
+                    <a href="https://www.w3schools.com" target='_blank' className='link'><FontAwesomeIcon icon={faGlobe} className='link' inverse/></a>
+                    <a href="https://www.w3schools.com" target='_blank' className='link'><FontAwesomeIcon icon={faYoutube} className='link' inverse/></a>
+
                 </div>
             </div>
 
@@ -92,6 +108,7 @@ function Dev()  {
     };
 
     useEffect(() => {
+        applyStyles();
         window.addEventListener('mousemove', applyStyles);
         return () => {
           window.removeEventListener('mousemove', applyStyles);
@@ -152,9 +169,10 @@ function Dev()  {
                 <div className='myname'>Maryam Dar</div>
                 <div className='dev'>Computer Engineering Student</div>
                 <div className='socialHolder'>
-                    <div className='social'></div>
-                    <div className='social'></div>
-                    <div className='social'></div>
+                    <a href="https://www.w3schools.com" target='_blank'><FontAwesomeIcon icon={faTelegram} className='social' inverse/></a>
+                    <a href="https://www.w3schools.com" target='_blank'><FontAwesomeIcon icon={faInstagram} className='social' inverse/></a>
+                    <a href="https://github.com/marydar" target='_blank'><FontAwesomeIcon icon={faGithub} className='social' inverse/></a>
+                    
                 </div>
                
             </div>
